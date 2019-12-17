@@ -1,0 +1,7 @@
+.idea
+.DS_Store
+/_
+s3creds.sh
+/backups
+/staging
+/logs
