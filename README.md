@@ -113,7 +113,7 @@ These cron jobs will log all output to `/opt/wp-backup/logs/`.
     If you're using S3 (replace `bucket-name` with the name of your bucket from above):
     
     ```text
-    30 7 * * * . /opt/bitnami/scripts/setenv.sh; . /opt/wp-backup/s3creds.sh; /opt/wp-backup/backup.sh "auto" "auto" "coffeeinbeakers-wp-backups" >> "/opt/wp-backup/logs/cron-backup-`date -u +\%s`.txt" 2>&1
+    30 7 * * * . /opt/bitnami/scripts/setenv.sh; . /opt/wp-backup/s3creds.sh; /opt/wp-backup/backup.sh "auto" "auto" "bucket-name" >> "/opt/wp-backup/logs/cron-backup-`date -u +\%s`.txt" 2>&1
     30 8 * * * . /opt/bitnami/scripts/setenv.sh; . /opt/wp-backup/s3creds.sh; /opt/wp-backup/cleanup.sh >> "/opt/wp-backup/logs/cron-cleanup-`date -u +\%s`.txt" 2>&1
     ```
     
